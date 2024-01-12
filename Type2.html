@@ -1,0 +1,63 @@
+<html>
+<head>
+  <title>Hiiiiii</title>
+  <style>
+    body {
+      background-size: cover;
+      background-image: url('https://media.tenor.com/eGCZyq7oqLsAAAAC/memento-mori.gif');
+      transition: background-image 1s; /* Add a transition effect for smoother background changes */
+    }
+
+    p {
+      text-align: center;
+      font-size: 32px;
+      font-family: Candara, Oswald;
+      color: white; /* Adjust text color for better visibility on the background */
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 25%;
+    }
+
+    #botao1 {
+      position: fixed;
+      top: 70%;
+      left: 55%;
+      transform: translate(-50%, -50%);
+    }
+
+    #botao2 {
+      position: absolute;
+      left: 39%;
+      top: 68%;
+    }
+  </style>
+</head>
+<body>
+  <p>Can we meet sometime soon?</p>
+  <img id="image" src="https://media.tenor.com/rioMEV9J50kAAAAd/heart-beating-love.gif">
+  <button id="botao1">OfCourse! It's Lokesh</button>
+  <button id="botao2">Nah</button>
+  <script>
+    const botao1 = document.getElementById('botao1');
+    botao1.addEventListener('click', function() {
+      document.body.style.backgroundImage = "url('https://media.tenor.com/NXvU9jbBUGMAAAAC/fireworks.gif')";
+      document.getElementById('image').src = "https://media.tenor.com/zC3KLeOFE60AAAAd/jerry.gif";
+    });
+  </script>
+  <script>
+    const button2 = document.getElementById('botao2');
+    let left = 40;
+    button2.addEventListener('mouseover', function() {
+      if (left == 40) {
+        left = 44;
+      } else {
+        left = 40;
+      }
+      this.style.left = left + '%';
+    });
+  </script>
+</body>
+</html>
